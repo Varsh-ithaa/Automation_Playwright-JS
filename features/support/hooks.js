@@ -33,10 +33,10 @@ BeforeStep(function () {
     // You can add any setup code here if needed
 });
 
-// AfterStep(async function ({pickle}) {
-//     const img = await this.page.screenshot({path :`./reports/screenshots/${pickle.id}.zip/${pickle.name}.png`, type: "png"});
-//     await this.attach(img, "image/png");
-// });
+AfterStep(async function ({pickle}) {
+    const img = await this.page.screenshot({path :`./reports/screenshots/${pickle.id}.zip/${pickle.name}.png`, type: "png"});
+    await this.attach(img, "image/png");
+});
 
 
 

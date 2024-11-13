@@ -745,21 +745,21 @@ input#darkCheck:checked ~ label>svg#moon {
                         
                             <span class="tag">@E2E</span>
                         
-                            <span class="tag">@Admin_Feature</span>
+                            <span class="tag">@Add_User_Create</span>
                         
                     
                 
             </div>
             <h1>Feature:
-                <small>Orange HRM</small>
+                <small>Complete End to End Automation</small>
             </h1>
             
                 <p>
                <p><strong>File name:</strong>
-                    E2E.feature
+                    Add_User.feature
                 </p>
                 <p><strong>Relative path:</strong>
-                    scenarios/E2E.feature</p>
+                    E2E/Add_User.feature</p>
             
         </div>
 
@@ -808,7 +808,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                 Passed
                             </p>
                         </td>
-                        <td class="percentage">0.00 %</td>
+                        <td class="percentage">100.00 %</td>
                     </tr>
                     <tr>
                         <td>
@@ -817,7 +817,7 @@ input#darkCheck:checked ~ label>svg#moon {
                                 Failed
                             </p>
                         </td>
-                        <td class="percentage">100.00 %</td>
+                        <td class="percentage">0.00 %</td>
                     
                     
                     </tr>
@@ -829,7 +829,7 @@ input#darkCheck:checked ~ label>svg#moon {
         
             <tr>
                 <th> Total duration:</th>
-                <tr><td>00:00:05.006</td></tr>
+                <tr><td>00:00:11.188</td></tr>
             </tr>
         
     </table>
@@ -954,13 +954,13 @@ input#darkCheck:checked ~ label>svg#moon {
                             
                                 <span class="tag">@E2E</span>
                             
-                                <span class="tag">@Admin_Feature</span>
+                                <span class="tag">@Add_User_Create</span>
                             
                         
                     
                 </div>
 
-                <h2>Scenario Outline: <small>Admin - Verifying User Management Page</small></h2>
+                <h2>Scenario Outline: <small>Creating/Adding New user in Admin module.</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -974,11 +974,11 @@ input#darkCheck:checked ~ label>svg#moon {
                     
 
                     
-                        <li>
-                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
-                        </li>
-                    
 
+                    
+                        <li>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">4</span>
+                        </li>
                     
 
                     
@@ -986,7 +986,7 @@ input#darkCheck:checked ~ label>svg#moon {
                     
                         <li>
                             <span style="font-size:1.2em"> Duration:</span>
-                            <span style=padding-right:5em>00:00:05.006</span>
+                            <span style=padding-right:5em>00:00:11.188</span>
                         </li>
                     
                 </ul>
@@ -998,12 +998,14 @@ input#darkCheck:checked ~ label>svg#moon {
                 <div class="scenario-step-container"></div>
                     
                         
+                
+                        
                             <div class="scenario-step-container">
 
                                 
                                     
-                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step failed">
-                                            <i class="fa fa-exclamation-circle fa-2x failed-color"></i>
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
                                         </div>
                                     
                                 
@@ -1012,13 +1014,13 @@ input#darkCheck:checked ~ label>svg#moon {
                                     <span class="keyword highlight">Given </span>
 
                                     
-                                        I am logging in as user "Admin" and "admin123" with permission to create "Add user" request
+                                        Launching the URL
                                         
                                     
 
                                     
                                         
-                                            <span class="duration">00:00:05.006</span>
+                                            <span class="duration">00:00:03.984</span>
                                         
                                     
 
@@ -1027,8 +1029,6 @@ input#darkCheck:checked ~ label>svg#moon {
                                 
                                     
 
-                                    
-                                        <a href="#error0-0-error" data-toggle="collapse">+ Show Error</a>
                                     
 
                                     
@@ -1047,12 +1047,73 @@ input#darkCheck:checked ~ label>svg#moon {
 
                         
                             
-                                <div id="error0-0-error" class="scenario-step-collapse collapse">
-                                    <pre class=info>Error: function timed out, ensure the promise resolves within 5000 milliseconds
-    at Timeout.(anonymous) (C:\Users\ARYA\OneDrive\Desktop\doc\Varshitha\JavascriptPWpractice\node_modules\@cucumber\cucumber\lib\time.js:54:20)
-    at listOnTimeout (node:internal/timers:573:17)
-    at process.processTimers (node:internal/timers:514:7)</pre>
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Then </span>
+
+                                    
+                                        user should signIn with "Admin" and "admin123"
+                                        
+                                    
+
+                                    
+                                        
+                                            <span class="duration">00:00:02.700</span>
+                                        
+                                    
+
                                 </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
                             
 
                             
@@ -1073,6 +1134,144 @@ input#darkCheck:checked ~ label>svg#moon {
                         
 
                     
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">Then </span>
+
+                                    
+                                        Verify user logged in succsessfully
+                                        
+                                    
+
+                                    
+                                        
+                                            <span class="duration">00:00:02.534</span>
+                                        
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" title="Success">
+                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">When </span>
+
+                                    
+                                        user selects "Admin" menu
+                                        
+                                    
+
+                                    
+                                        
+                                            <span class="duration">00:00:01.969</span>
+                                        
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
+                        
                 
             </div>
         </div>
@@ -1124,8 +1323,8 @@ input#darkCheck:checked ~ label>svg#moon {
                     ],
                     datasets: [{
                         data: [
-                            0,
                             1,
+                            0,
                             0,
                             0,
                             0,

@@ -2,7 +2,11 @@
   "name": "automation_playwright_orhm",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "report:clean": "rimraf ./reports/reports.json && rimraf ./reports/downloads ",
+    "tags": "npm run report:clean&& cucumber-js  --exit -f json:reports/results.json&& node reports/generate.js --tags",
+    "report": "rimraf st-coverage&& node reports/generate.js"
+  },
   "author": "",
   "license": "ISC",
   "description": "",
@@ -11,6 +15,8 @@
     "@types/node": "^22.9.0"
   },
   "dependencies": {
-    "cucumber": "^6.0.7"
+    "cucumber": "^6.0.7",
+    "cucumber-html-reporter": "^7.2.0",
+    "rimraf": "^6.0.1"
   }
 }

@@ -1,9 +1,9 @@
 const { Given, Then, When, status } = require('@cucumber/cucumber');
 const { expect } = require('@playwright/test')
-const UserDetails = require('../UserDetails.json');
-const pageobj = require('../Locators.json');
-const Execute = require('../support/Execute');
-const { attachScreenshot } = require('../support/world'); 
+// const UserDetails = require('../UserDetails.json');
+// const pageobj = require('../Locators.json');
+// const Execute = require('../support/Execute');
+// const { attachScreenshot } = require('../support/world'); 
 
 
 
@@ -13,33 +13,24 @@ Given(/^Launching the URL$/, async function () {
     console.log(await this.page.title());
 });
 
-When(/^user clicks on login button$/, async function () {
-    await this.page.click('button[type="submit"]');
-    const error = this.page.textContent('//div[@class="orangehrm-login-slot-wrapper"]//div[1]//div[1]//span[1]');
-    console.log(error);
-})
 
 
-Then(/^user should signIn with {string} and {string}$/, async function (username, password) {
+Then(/^user should signIn with "(.*)" and "(.*)"$/, async function (username, password) {
     await this.page.fill('input[placeholder="Username"]', username);
     await this.page.fill('input[placeholder="Password"]', password)
-    await Execute.attachScreenshot(this.page, this.attach);
     await this.page.click('button[type="submit"]');
-    await Execute.attachScreenshot(this.page, this.attach);
 })
 
 Then(/^Verify user logged in succsessfully$/, async function () {
     await this.page.click('//a[@class="oxd-main-menu-item active"]');
     const uname = await this.page.locator('//p[@class="oxd-userdropdown-name"]');
-    await Execute.attachScreenshot(this.page, this.attach);
     console.log(await uname.textContent());
 })
 
-When(/^user selects {string} menu$/, async function (menu) {
+When(/^user selects "(.*)" menu$/, async function (menu) {
     await this.page.click('ul[class="oxd-main-menu"] >li:nth-child(1)');
     const heading = await this.page.textContent('span[class="oxd-topbar-header-breadcrumb"]');
     console.log(heading);
-    await Execute.attachScreenshot(this.page, this.attach);
 })
 
 

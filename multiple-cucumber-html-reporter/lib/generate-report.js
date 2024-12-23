@@ -3,7 +3,6 @@
 const _ = require('lodash');
 const fs = require('fs-extra');
 const jsonFile = require('jsonfile');
-const open = require('open');
 const path = require('node:path');
 const { v4: uuid } = require('uuid');
 const { Duration } = require('luxon');

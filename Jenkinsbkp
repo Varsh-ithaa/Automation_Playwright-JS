@@ -1,0 +1,63 @@
+// import java.text.SimpleDateFormat
+
+// def globalDate = new Date()
+// def timeInHours = globalDate.getHours()
+// def timeInMinutes = globalDate.getMinutes()
+// def executionFlag = true
+
+// // Function to get the current day of the week as a string
+// def genTodaysDay() {
+//     def date = new Date()
+//     def dayName = new SimpleDateFormat("EEEE").format(date) // Gets the full day name (e.g., Monday, Tuesday)
+//     println "Today's Day: " + dayName
+//     return dayName
+// }
+
+// pipeline {
+//     agent any
+
+//     parameters {
+//         booleanParam(name: 'Regresstion', defaultValue: true, description: 'Run regression tests')
+//         booleanParam(name: 'shakeout-SIT', defaultValue: true, description: 'Run shakeout SIT tests')
+//         string(name: 'userTag', defaultValue: '', description: 'Enter Tag which you want to run')
+//     }
+
+//     stages {
+//         stage('Clean Install') {
+//             environment {
+//                 PLAYWRIGHT_SKIP_DOWNLOAD = 'true'
+//             }
+//             steps {
+//                 // Install dependencies and set up necessary directories for Playwright
+//                 sh "npm install"
+//                 sh 'mkdir -p node_modules/playwright/.local-chromium/browser/'
+//                 script {
+//                     // Print the current day
+//                     println "Today's Day: " + genTodaysDay()
+//                 }
+//             }
+//         }
+
+//         stage('Specific Tag - Test Execution') {
+//             steps {
+//                 script {
+//                     // Check if the user provided a tag, and conditionally run tests
+//                     if (params.userTag) {
+//                         println "Running tests for tag: ${params.userTag}"
+//                         // Here, you can trigger your test execution based on the userTag
+//                         // Example: sh "npm run test --tag=${params.userTag}"
+//                     } else {
+//                         println "No tag provided. Skipping specific tag test execution."
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     post {
+//         always {
+//             // This block can be used for cleanup or final steps after the pipeline execution
+//             echo 'Pipeline completed.'
+//         }
+//     }
+// }
